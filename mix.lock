@@ -1,0 +1,5 @@
+%{
+  "cubdb": {:hex, :cubdb, "2.0.2", "d4253885084dae37a8ff73887d232864eb38ecac962aa08543e686b0183a1d62", [:mix], [], "hexpm", "c99cc8f9e6c4deb98d16cca5ded1928edd22e48b4736b76e8a1a85367d7fe921"},
+  "erlang_exif": {:hex, :erlang_exif, "3.0.0", "557457bd2c48637abd356d10059c5a6a1bc88aa152645a1dd43d2d843fcdadbb", [:rebar3], [], "hexpm", "f03815ac2c2808a84313b3dfaff41ccb2e3bc7a643113274c76bf9241de490cd"},
+  "exexif": {:hex, :exexif, "0.0.5", "82c800258b4b8d1ac7197bf17e2cdf288f553deb058efa8ba0110daf0a1dccb8", [:mix], [], "hexpm", "8ce9a19abe0bdae4a9a5dcda1469b98a34b7097776a2ca933a65104b27d14fa0"},
+}
