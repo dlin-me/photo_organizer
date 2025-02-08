@@ -1,6 +1,6 @@
 # PhotoOrganizer
 
-PhotoOrganizer is a command-line tool for organizing photos and videos by copying them from a source directory to a target directory using a specific naming scheme. It also records file info in a CubDB database to avoid duplicates.
+PhotoOrganizer is a simple command-line tool for organizing photos and videos by copying them from a source directory to a target directory using a specific naming scheme. It also records file info in a CubDB database to avoid duplicates.
 
 ## Purpose
 
@@ -11,8 +11,13 @@ The main purpose of PhotoOrganizer is to help you organize your photos and video
 - Organizes photos and videos into directories based on the date they were taken (YYYY/MM/DD).
 - Identifies and handles duplicate files by moving them to a separate "duplication" directory.
 - Extracts metadata from media files, including date/time, file size, MD5 hash, and GPS information (if available).
-- Rebuilds the database index for media files in the target directory.
+- Optionally rebuilds the database index for media files in the target directory.
 - Reports the total number of files in the database.
+
+## Requirements
+
+- Elixir ~> 1.17
+- Erlang
 
 ## Installation
 
@@ -39,7 +44,15 @@ To get started with development, follow these steps:
    mix escript.build
    ```
 
+This will generate the `po` executable in the project root directory.
+
 ## Usage
+
+The repository comes with a compiled `po` executable. To run it, make sure Erlang is installed on your system.
+
+```sh
+./po <source_dir> <target_dir>
+```
 
 The `po` command provides three subcommands: `import`, `index`, and `report`.
 
@@ -73,8 +86,4 @@ po report [TARGET_DIR]
 ```
 
 - `TARGET_DIR`: (Optional) The directory containing the database to report on. Defaults to the current directory.
-
-## Documentation
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc) and published on [HexDocs](https://hexdocs.pm). Once published, the docs can be found at <https://hexdocs.pm/photo_organizer>.
 
